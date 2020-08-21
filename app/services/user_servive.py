@@ -1,5 +1,6 @@
 from fastapi import HTTPException
 from starlette.responses import JSONResponse
+
 from starlette.status import (
     HTTP_200_OK,
     HTTP_201_CREATED,
@@ -8,10 +9,12 @@ from starlette.status import (
 
 from ..services import AuthService
 from ..utils import build_response
+
 from ..db import (
     MongoDB,
     get_client
 )
+
 from ..models.user_models import (
     User,
     OutUser,
